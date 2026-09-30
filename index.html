@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CompareJobs</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">CompareJobs</div>
+
+        <div class="nav-links">
+            <a href="#compare">Compare</a>
+            <a href="#how-it-works">How It Works</a>
+        </div>
+    </nav>
+
+
+    <!-- Main Introduction -->
+    <main>
+
+        <section class="hero">
+
+            <p class="eyebrow">SMARTER JOB COMPARISONS</p>
+
+            <h1>
+                Don't just find a job.<br>
+                Compare the opportunity.
+            </h1>
+
+            <p class="hero-description">
+                Paste two job listings and instantly compare
+                compensation, requirements, benefits, skills, and more.
+            </p>
+
+            <a href="#compare" class="start-button">
+                Start comparing
+            </a>
+
+        </section>
+
+
+        <!-- Job Comparison Section -->
+        <section class="compare-section" id="compare">
+
+            <div class="section-heading">
+                <p class="eyebrow">YOUR OPPORTUNITIES</p>
+                <h2>Let's compare.</h2>
+                <p>Add two job listings to get started.</p>
+            </div>
+
+
+            <div class="job-container">
+
+                <!-- JOB 1 -->
+                <div class="job-card">
+
+                    <div class="job-number">01</div>
+
+                    <h3>First opportunity</h3>
+
+                    <label for="jobTitle1">Job title</label>
+                    <input
+                        type="text"
+                        id="jobTitle1"
+                        placeholder="Software Engineer"
+                    >
+
+                    <label for="company1">Company</label>
+                    <input
+                        type="text"
+                        id="company1"
+                        placeholder="Company name"
+                    >
+
+                    <label for="description1">Job description</label>
+                    <textarea
+                        id="description1"
+                        placeholder="Paste the complete job description here..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- JOB 2 -->
+                <div class="job-card">
+
+                    <div class="job-number">02</div>
+
+                    <h3>Second opportunity</h3>
+
+                    <label for="jobTitle2">Job title</label>
+                    <input
+                        type="text"
+                        id="jobTitle2"
+                        placeholder="Software Developer"
+                    >
+
+                    <label for="company2">Company</label>
+                    <input
+                        type="text"
+                        id="company2"
+                        placeholder="Company name"
+                    >
+
+                    <label for="description2">Job description</label>
+                    <textarea
+                        id="description2"
+                        placeholder="Paste the complete job description here..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <button id="compareButton" class="compare-button">
+                Compare jobs
+                <span>→</span>
+            </button>
+
+        </section>
+
+        <!-- Comparison Results -->
+<section class="results-section" id="results">
+
+    <div class="results-heading">
+        <p class="eyebrow">YOUR COMPARISON</p>
+        <h2>Side by side.</h2>
+        <p>Here's how these opportunities compare.</p>
+    </div>
+
+    <!-- Job Headers -->
+    <div class="results-job-header">
+
+        <div class="result-label"></div>
+
+        <div class="result-job">
+            <span>01</span>
+            <h3 id="resultTitle1">Job One</h3>
+            <p id="resultCompany1">Company One</p>
+        </div>
+
+        <div class="result-job">
+            <span>02</span>
+            <h3 id="resultTitle2">Job Two</h3>
+            <p id="resultCompany2">Company Two</p>
+        </div>
+
+    </div>
+
+
+    <!-- Salary -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>COMPENSATION</span>
+            <strong>Salary</strong>
+        </div>
+
+        <div class="result-value" id="salary1">
+            $90,000 – $110,000
+        </div>
+
+        <div class="result-value" id="salary2">
+            $100,000 – $120,000
+        </div>
+
+    </div>
+
+
+    <!-- Work Style -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>WORK ENVIRONMENT</span>
+            <strong>Work style</strong>
+        </div>
+
+        <div class="result-value" id="workStyle1">
+            Hybrid
+        </div>
+
+        <div class="result-value" id="workStyle2">
+            Remote
+        </div>
+
+    </div>
+
+
+    <!-- Location -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>LOCATION</span>
+            <strong>Where</strong>
+        </div>
+
+        <div class="result-value" id="location1">
+            Phoenix, AZ
+        </div>
+
+        <div class="result-value" id="location2">
+            Remote
+        </div>
+
+    </div>
+
+
+    <!-- Experience -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>REQUIREMENTS</span>
+            <strong>Experience</strong>
+        </div>
+
+        <div class="result-value" id="experience1">
+            2+ years
+        </div>
+
+        <div class="result-value" id="experience2">
+            3+ years
+        </div>
+
+    </div>
+
+
+    <!-- Education -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>REQUIREMENTS</span>
+            <strong>Education</strong>
+        </div>
+
+        <div class="result-value" id="education1">
+            Bachelor's degree
+        </div>
+
+        <div class="result-value" id="education2">
+            Bachelor's preferred
+        </div>
+
+    </div>
+
+
+    <!-- Skills -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>QUALIFICATIONS</span>
+            <strong>Skills</strong>
+        </div>
+
+        <div class="result-value" id="skills1">
+            Python • SQL • AWS
+        </div>
+
+        <div class="result-value" id="skills2">
+            Java • SQL • Azure
+        </div>
+
+    </div>
+
+
+    <!-- Benefits -->
+    <div class="comparison-row">
+
+        <div class="result-label">
+            <span>BENEFITS</span>
+            <strong>What's included</strong>
+        </div>
+
+        <div class="result-value" id="benefits1">
+            Health • 401(k) • PTO
+        </div>
+
+        <div class="result-value" id="benefits2">
+            Health • 401(k) • PTO
+        </div>
+
+    </div>
+
+
+    <!-- AI Summary -->
+    <div class="summary-card">
+
+        <p class="eyebrow">COMPARISON SUMMARY</p>
+
+        <h3>The big picture.</h3>
+
+        <p id="comparisonSummary">
+            Your comparison summary will appear here.
+        </p>
+
+    </div>
+
+
+    <button class="new-comparison-button" id="newComparisonButton">
+        Start a new comparison
+    </button>
+
+</section>
+
+
+        <!-- How It Works -->
+        <section class="how-section" id="how-it-works">
+
+            <p class="eyebrow">HOW IT WORKS</p>
+
+            <h2>
+                From job posting to<br>
+                clear comparison.
+            </h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <span>01</span>
+                    <h3>Paste</h3>
+                    <p>Add two job descriptions you're considering.</p>
+                </div>
+
+                <div class="step">
+                    <span>02</span>
+                    <h3>Analyze</h3>
+                    <p>Our system identifies the important details from each listing.</p>
+                </div>
+
+                <div class="step">
+                    <span>03</span>
+                    <h3>Compare</h3>
+                    <p>See the opportunities side-by-side in a simple comparison.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">CompareJobs</div>
+        <p>Compare opportunities with clarity.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
